@@ -1,10 +1,14 @@
 import socket
 import time
+import sys
 
 sock = socket.socket(socket.AF_INET,
         socket.SOCK_DGRAM)     
 
-UDP_IP = "172.20.0.12" #Target IP Address
+if sys.argv[1]:
+    UDP_IP = sys.argv[1]
+else:
+    UDP_IP = "172.20.0.12"
 UDP_PORT = 30704
 
 #Create a socket    

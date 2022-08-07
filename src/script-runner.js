@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 
 module.exports.executeScript = (pathToScript, scriptTimeout, callback) => {
-    let process = exec(`sh ${pathToScript}`, (error, stdout, stderr) => {
+    let process = exec(`python3 ${pathToScript}`, (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             return;

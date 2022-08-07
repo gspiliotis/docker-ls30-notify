@@ -4,10 +4,10 @@ const { executeScript } = require('./script-runner');
 const TOKEN = process.env.TOKEN || 'thisisunsafe';
 const TOKEN_URL = `/${TOKEN}`;
 const WEBHOOK_SCRIPT = process.env.WEBHOOK_SCRIPT || '/scripts/helloworld.sh';
-const ZK_IP = process.env.ZK_IP || '192.168.1.10';
+const XPORT_IP = process.env.XPORT_IP || '192.168.1.10';
 const DELAY = process.env.DELAY || 3;
 const SCRIPT_EXECUTION_TIMEOUT = process.env.SCRIPT_EXECUTION_TIMEOUT || 30000;
-const SCRIPT = `${WEBHOOK_SCRIPT} ${ZK_IP} ${DELAY}`;
+const SCRIPT = `${WEBHOOK_SCRIPT} ${XPORT_IP}`;
 
 // Create an instance of the http server to handle HTTP requests
 const app = createServer();
